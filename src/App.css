@@ -18,52 +18,22 @@ body {
 
 .conteudoLateralEsquerda {
   display: flex;
-  width:15vw;
+  width:28vw;
   background: white;
   position: relative;
-
-}
-
-.separar{
-  margin: 13px;
-}
-li {
-  display: flex;
-  list-style-type: none;
-  padding-bottom: 30px;
-  /* row-gap: 30px; */
-  /* flex-direction: column; */
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: 5px;
-  
-}
-
-.icone_perfil{
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  margin-left: 45px;
-
-
-  
-}
-
-/* .separar1 {
-  margin-top: 100vh;
-}
-
-.nome1 {
-  margin-top: 100vh;
-} */
-
-.conteudoLateralDireita {
-  background: blue;
-  width:20vw;
 }
 
 .conteudoCentral {
-  width:65vw;
+  width:30vw;
   background: yellow;
+}
+
+.conteudoLateralDireita {
+  background: blue;
+  width:42vw;
+}
+
+
+p {
+  margin: 0;
 }

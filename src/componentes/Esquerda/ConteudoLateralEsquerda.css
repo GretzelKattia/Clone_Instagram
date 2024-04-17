@@ -1,0 +1,46 @@
+.imagemInstagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 150px;
+    height: auto;
+    padding-left: 10px;
+    margin: 20px 0px;
+}
+
+
+
+.separar{
+    margin: 12px;
+  }
+  
+  li {
+    display: flex;
+    list-style-type: none;
+    justify-content:flex-start;
+    align-items: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .icone_perfil{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content:flex-start;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center; /* alinha os itens verticalmente */
+    margin-right: 10px;
+  }
+  
+  
+  ul {
+    list-style-type: none;
+    padding-left: 15px;
+  }
+  
+  
