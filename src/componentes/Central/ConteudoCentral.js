@@ -1,5 +1,5 @@
 import './ConteudoCentral.css';
-import Stories from './Stories';
+import Stories from './Story/Stories';
 import Feed from './Feed';
 
 export default function ConteudoCentral () {

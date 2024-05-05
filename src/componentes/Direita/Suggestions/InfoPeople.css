@@ -1,0 +1,52 @@
+/* Estilização da lista de sugestões */
+.PeopleSuggestion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Espaçamento entre cada sugestão */
+    padding: 5px 15px 2px 15px;
+}
+
+.suggestion-imagem-perfil {
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+
+.PeopleSuggestion img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    
+}
+
+/* Estilização do texto das sugestões */
+.sugestaoInformacaoGenerica {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.suggestion-at-usuario {
+    color: #666; /* Cor mais suave para o nome de usuário */
+
+}
+
+.suggestion-nome-usuario {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.follow {
+    margin-left: auto; /* Alinha o botão "follow" no extremo direito */
+    color: #007bff;
+    cursor: pointer; 
+    font-weight: 500;
+    
+  }
+  
+  .follow:hover {
+    color: #0055b1; 
+    text-decoration: none !important; 
+  }
+

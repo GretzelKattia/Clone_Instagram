@@ -1,0 +1,79 @@
+/* .Stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 90vh;
+} */
+
+.ConteudoCentral {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ajustado para flex-start */
+    align-items: center; 
+    width: calc(100% - 18vw); /* Ajustado para levar em conta a largura do conteúdo lateral esquerdo */
+    height: 100%;
+    /* background-color: #250505; */
+    margin-left: 18vw; /* Adicionado margem esquerda para evitar sobreposição */
+}
+
+.Stories {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 20vh;
+}
+
+
+.Story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 70px;
+    margin: 5px;
+    margin-top: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.imagem-perfil {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 2px;
+    /* background-color: rgb(48, 155, 249); */
+    background: linear-gradient( #b62dc8, #ffba27 60%);
+    /* background: radial-gradient(
+        #fed373 4%,
+        #f15245 30%,
+        #d92e7f 62%,
+        #9b36b5 15%);  */
+
+}
+
+.Story img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    padding: 1px; /* Adiciona um preenchimento para criar o espaço em branco entre a imagem e a borda branca */
+    background: #fff;
+    box-sizing: border-box; /* Garante que a borda e o preenchimento não aumentem o tamanho total da imagem */
+}
+
+
+
+
+
+.nome-usuario {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin: 0;
+    margin-top: 3px;
+    font-size: 12px;
+}

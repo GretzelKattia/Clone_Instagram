@@ -1,0 +1,102 @@
+/* .header-suggestion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.suggestion-imagens-perfil {
+    width: 56px;
+    height: auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.suggestion-information-perfil{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+} */
+
+.container-suggestion {
+    margin-top: 18px;
+    padding: 10px 15px 2px 15px;
+    
+    
+}
+
+.header-suggestion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-suggestion img {
+    height: 56px;
+    width: 56px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.user-infos-suggestion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex: 1;
+}
+
+.user-infos-suggestion .infos span {
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.user-infos-suggestion .infos p {
+    font-size: 13px;
+    color: var(--secondary);
+}
+
+.mudarConta {
+    font-weight: 500;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.mudarConta:hover {
+    color: #0055b1; 
+}
+
+
+
+.header-main-suggestion  {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 20px 0 10px 0;
+}
+
+.header-suggestion p {
+    font-size: 15px;
+    color: #007bff;
+
+    font-weight: 500;
+}
+
+.suggestionPeople {
+    color: #898989;
+    font-weight: 500;
+}
+
+.header-main-suggestion span {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.header-main-suggestion span:hover {
+    opacity: 0.5;
+}
+
+.user-suggestion {
+    margin-top: 5px;
+}
+

@@ -1,11 +1,123 @@
-.Post {
-    width: 500px;
+header {
+    padding: 5px 1px 0px 1px;
+    /* background: rgb(170, 85, 85); */
+
+
 }
 
-.Post .card-header {
-    background: blue;
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile h3 {
+    cursor: pointer;
+}
+
+.imagem-postagem {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
 .Post .card-body img {
-   width: 100%;
+    width: 100%;
+ } 
+
+.Post {
+    width: 550px;
+}
+
+.card-body {
+    object-fit: cover;
+    
+}
+
+.Post input {
+     width: 100%;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+
+}
+
+.card-footer .icons-1 {
+    display: flex;
+    gap: 16px;
+}
+    
+.icons-1 {
+    cursor: pointer;
+    align-items: center;
+}
+
+.salvar {
+    cursor: pointer;
+}
+
+.like {
+    margin-top: 6px;
+}
+
+.like span {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.legend {
+    margin: 1px 0px;
+}
+
+.legend p strong {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.traductor {
+    margin: 5px 0px;;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.comments {
+    color: rgb(92, 92, 92);
+    cursor: pointer;
+}
+
+.fake-comment {
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    flex: 1;  /* Serve para pegar todo o espaço que tem livre no container */
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.fake-comment input {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.horizontal-line {
+    position: relative;
+    bottom: 0; /* Alinha a linha na parte inferior do post */
+    left: 0; /* A linha começa a partir da borda esquerda do post */
+    width: 100%; /* A linha se estende por toda a largura do post */
+    height: 1px; /* Altura da linha */
+    background-color: #ccc; /* Cor da linha */
+    margin: 8px 0px;
 }

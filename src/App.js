@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import Esquerda from './componentes/Esquerda/ConteudoLateralEsquerda'
-// import Direita from './ConteudoLateralDireita';
+import Direita from './componentes/Direita/ConteudoLateralDireita';
 import Central from './componentes/Central/ConteudoCentral'
 // './ConteudoLateralEsquerda';
 // ../componentes/Central/ConteudoCentral
@@ -13,10 +13,15 @@ function App() {
       <Esquerda />
       <Central />
 
-      
-      
       <div className='conteudoLateralDireita'>
-        {/* 
+      <Direita />
+      </div>
+      
+    </>
+  );
+}
+
+{/* 
           Login
           Sugestões de amigos
           Sugestões de contas
@@ -25,9 +30,5 @@ function App() {
           Sugestões de posts patrocinados
           Link legais
         */}
-      </div>
-    </>
-  );
-}
 
 export default App;

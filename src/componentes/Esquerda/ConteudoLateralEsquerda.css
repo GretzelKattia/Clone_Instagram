@@ -1,17 +1,24 @@
+
 .imagemInstagram {
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items:center;    
     width: 150px;
     height: auto;
     padding-left: 10px;
     margin: 20px 0px;
 }
 
+.conteudoLateralEsquerda {
+  background-color: rgb(255, 255, 255);
+  border-right: 1px solid #ccc; /* Adiciona uma borda direita ao conteúdo lateral esquerdo */
 
+  font-size: 20px;
+
+}
 
 .separar{
-    margin: 12px;
+    margin: 15px;
   }
   
   li {
@@ -21,6 +28,7 @@
     align-items: center;
     display: flex;
     align-items: center;
+
   }
   
   .icone_perfil{
@@ -29,18 +37,25 @@
     display: flex;
     justify-content:flex-start;
     width: 100%;
+    
   }
   
   .container {
     display: flex;
     align-items: center; /* alinha os itens verticalmente */
-    margin-right: 10px;
+    margin: 12px 0px; /* Adiciona uma margem entre os itens da lista */
+
+
   }
   
   
   ul {
     list-style-type: none;
-    padding-left: 15px;
+    padding-left: 5%;
   }
+
+
   
-  
+  strong {
+    font-weight: 700;
+  }

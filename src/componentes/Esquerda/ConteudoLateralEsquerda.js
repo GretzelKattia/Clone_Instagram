@@ -2,16 +2,16 @@ import logo from '../../imagens/images.png';
 import Menu from '../../TextMenu';
 import './ConteudoLateralEsquerda.css';
 
-import { FaHome } from "react-icons/fa";
+import { GoHomeFill } from "react-icons/go";
 import { FaMagnifyingGlass } from "react-icons/fa6";
-import { LuMessageCircle } from "react-icons/lu";
+import { RiMessengerLine } from "react-icons/ri";
 
 import { TiHeartOutline } from "react-icons/ti";
 import { MdOutlineExplore } from "react-icons/md";
 import { PiVideoFill } from "react-icons/pi";
 
 
-import { MdOutlineCreateNewFolder } from "react-icons/md";
+import { BsPlusSquare } from "react-icons/bs";
 import { MdPerson3 } from "react-icons/md";
 
 
@@ -28,14 +28,16 @@ export default function ConteudoLateralEsquerda() {
 
 
             <ul>
-                <Menu   nome="Home" icone={<FaHome fontSize={25}/>} />
-                <Menu nome="Pesquisar" icone= {<FaMagnifyingGlass fontSize={20}/>}/>
-                <Menu nome="Pesquisar" icone= {<MdOutlineExplore fontSize={25}/>}/>
+                <strong>
+                <Menu nome="Home" icone={<GoHomeFill fontSize={30}/>} />
+                </strong>
+                <Menu nome="Pesquisar" icone= {<FaMagnifyingGlass fontSize={25}/>}/>
+                <Menu nome="Explorar" icone= {<MdOutlineExplore fontSize={30}/>}/>
 
-                <Menu nome="Mensagens" icone= {<LuMessageCircle fontSize={25}/>}/>
-                <Menu nome="Notificação" icone= {<TiHeartOutline fontSize={25}/>}/>
-                <Menu nome="Criar" icone= {<MdOutlineCreateNewFolder fontSize={25}/>}/>
-                <Menu nome="Reels" icone= { <PiVideoFill fontSize={25}/>}/>
+                <Menu nome="Mensagens" icone= {<RiMessengerLine fontSize={30}/>}/>
+                <Menu nome="Notificação" icone= {<TiHeartOutline fontSize={30}/>}/>
+                <Menu nome="Criar" icone= {<BsPlusSquare fontSize={25}/>}/>
+                <Menu nome="Reels" icone= { <PiVideoFill fontSize={30}/>}/>
 
                 <div className='icone_perfil'>
             <Menu nome="Perfil" icone= {<MdPerson3 fontSize={30}/>}/>

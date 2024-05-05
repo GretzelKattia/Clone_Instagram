@@ -1,0 +1,26 @@
+.ConteudoLateralDireita {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .detalhes {
+    cursor: pointer;
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin: 0px 15px;
+    opacity: 0.5;
+  }
+
+p:hover {
+    opacity: 0.9;
+}
+
+a {
+    text-decoration: #ff32ff wavy underline;; 
+    color: inherit; 
+}
