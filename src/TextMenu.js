@@ -1,8 +1,4 @@
 
-var xicara = {
-    nome: 'Xícara',
-    preco: 10.00
-}
 
 export default function TextMenu(props) {
   return (

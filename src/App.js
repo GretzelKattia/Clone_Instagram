@@ -21,14 +21,5 @@ function App() {
   );
 }
 
-{/* 
-          Login
-          Sugestões de amigos
-          Sugestões de contas
-          Sugestões de hashtags
-          Sugestões de locais
-          Sugestões de posts patrocinados
-          Link legais
-        */}
 
 export default App;
