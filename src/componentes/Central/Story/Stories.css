@@ -1,11 +1,3 @@
-/* .Stories {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 90vh;
-} */
-
 .ConteudoCentral {
     display: flex;
     flex-direction: column;
