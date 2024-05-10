@@ -1,70 +1,73 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Clone do Instagram
 
-## Available Scripts
+Este projeto é um clone do Instagram, criado com React. Foi um desafio e tanto, já que foi minha primeira experiência com React, mas estou orgulhoso do resultado (O professor [Gabriel](https://github.com/gabaugusto) também amou! 🥰)
 
-In the project directory, you can run:
+### Demostração do projeto
 
-### `npm start`
+https://github.com/GretzelKattia/Clone_Instagram/assets/146984390/50cec6b7-212f-4984-a48d-40640bb0af6b
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Funcionalidades Adicionadas
 
-### `npm test`
+No desenvolvimento deste projeto, implementei algumas funcionalidades interativas e visuais para criar um ambiente mais dinâmico e conectado, similar à experiência do Instagram original, para enriquecer a experiência do usuário, por exemplo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Curtidas e Salvamento de Postagens**: Agora, os usuários podem curtir postagens, o que muda o ícone para um coração vermelho preenchido, e salvar postagens, que altera o ícone amarelo com uma estrela amarela. Essas ações são intuitivas e melhoram a navegação no feed.
 
-### `npm run build`
+- **Contador de Curtidas**: Para cada postagem, há um sistema que contabiliza as curtidas. Quando um usuário curte uma postagem, o contador é incrementado, e se a curtida é removida, o contador é decrementado, atuando igual ao que acontece no Instagram.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Seção de Comentários**: Adicionei também uma aba dedicada aos comentários, permitindo que os usuários expressem suas opiniões e interajam com as postagens de uma maneira mais engajada e social .
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Como Usar
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Siga estas instruções para ver o projeto em ação no seu próprio ambiente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Pré-requisitos
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Antes de começar, certifique-se de ter o seguinte instalado em seu sistema:
 
-## Learn More
+- Node.js - [Download & Instalação Node.js](https://nodejs.org/)
+- Git - [Download & Instalação Git](https://git-scm.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Instalação
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone o repositório
 
-### Code Splitting
+```bash
+git clone https://github.com/GretzelKattia/Clone_Instagram.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Navegue até o diretório do projeto
 
-### Analyzing the Bundle Size
+```bash
+cd Clone_Instagram
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Instale as dependências
 
-### Making a Progressive Web App
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Executando o Projeto
 
-### Advanced Configuration
+Depois de instalar as dependências, você pode iniciar o servidor de desenvolvimento.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+Isso iniciará o servidor de desenvolvimento e abrirá automaticamente uma janela do navegador com o aplicativo em execução. Se isso não acontecer, você pode acessar o projeto manualmente em `http://localhost:3000` no seu navegador.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Se você tiver alguma dúvida ou sugestão, fique à vontade para abrir uma issue ou enviar um pull request.
+
+
+
+Feito com ❤️ por Gretzel Kattia!
+
