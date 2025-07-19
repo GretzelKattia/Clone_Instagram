@@ -31,7 +31,7 @@
   background: linear-gradient(
     45deg,
     #f0b733 0%,
-    #ef8f29  25%,
+    #ef8f29 25%,
     #dc9a27 50%,
     #cc2366 75%,
     #bc1888 100%
@@ -50,7 +50,6 @@
 }
 
 .nome-usuario {
-  margin-top: 5px;
   font-size: 12px;
   text-align: center;
   width: 100%;
@@ -65,35 +64,41 @@
   }
   
   .Stories {
-    padding-left: 15px;
+    padding: 0px 5px;
   }
 }
 
 @media (max-width: 768px) {
-  #root {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
-  }
-  
-  /* .ConteudoCentral {
-    grid-column: 1;
-    padding: 10px;
-  } */
-  
   .Stories {
     width: 100vw;
     margin-left: -10px;
     padding-left: 15px;
+    padding-bottom: 20px;
+  }
+  
+  .imagem-perfil {
+    width: 75px;
+    height: 75px;
+    padding: 2px;
+  }
+  
+  .Story img {
+    width: 67px;
+    height: 67px;
   }
 }
 
 @media (max-width: 480px) {
   .Story {
-    width: 70px;
+    width: 75px; /* Ajuste para telas pequenas */
   }
   
   .imagem-perfil {
-    width: 60px;
-    height: 60px;
+    padding: 1.5px; /* Um pouco menor, mas ainda visível */
+  }
+  
+  .Story img {
+    width: 64px;
+    height: 64px;
   }
 }

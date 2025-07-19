@@ -117,14 +117,15 @@ ul {
   
   ul {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     gap: 0;
   }
   
   .menu-item {
-    padding: 10px 15px;
+    padding: 10px 5px;
     width: auto;
+    min-width: 50px;
     flex-direction: column;
   }
   
@@ -135,10 +136,27 @@ ul {
   .menu-icon {
     margin-right: 0;
     margin-bottom: 0;
+    font-size: 22px;
   }
   
   .icone_perfil {
     position: static;
     margin: 0;
+    display: flex;
+  }
+  
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-item {
+    padding: 8px 3px;
+    min-width: 45px;
+  }
+  
+  .menu-icon {
+    font-size: 20px;
   }
 }

@@ -6,7 +6,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    padding: 0 10px;
+    /* gap: 16px; */
 }
 
 .profile {
@@ -150,33 +151,31 @@ header {
 
 @media (max-width: 768px) {
   .Post {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .card-body {
+    padding: 0 10px;
+  }
+
+  .like span {
+    display: block;
     width: 100%;
-    max-width: 100%;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-    /* padding: 10px; */
+    /* padding: 0 10px; */
+    box-sizing: border-box;
   }
-  
-  .card-body img {
-    max-height: 100vh;
-    object-fit: contain;
-  }
-  
-  .card-header, .card-footer {
-    padding: 10px;
-  }
-  
-  .fake-comment {
-    padding: 15px 10px;
-  }
-  
-  .legend p {
+
+  /* .legend p,
+  .traductor p,
+  .comments p {
     padding: 0 10px;
-  }
-  
-  .traductor, .comments {
-    padding: 0 10px;
+  } */
+}
+
+@media (max-width: 480px) {
+  .like span {
+    font-size: 13px;
   }
 }
 
