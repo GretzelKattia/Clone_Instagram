@@ -75,10 +75,10 @@
     grid-template-rows: 1fr auto;
   }
   
-  .ConteudoCentral {
+  /* .ConteudoCentral {
     grid-column: 1;
     padding: 10px;
-  }
+  } */
   
   .Stories {
     width: 100vw;

@@ -3,6 +3,9 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  width: 100%;
+  max-width: 550px;
+  margin: 0 auto;
 }
 
 .Post {
@@ -11,7 +14,8 @@
 
 @media (max-width: 768px) {
   .Feed {
-    padding: 10px;
+    gap: 20px;
+    padding: 0;
   }
   
   .Post {
@@ -19,5 +23,13 @@
     border-radius: 0;
     border-left: none;
     border-right: none;
+    border-top: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+  }
+}
+
+@media (max-width: 480px) {
+  .Feed {
+    gap: 15px;
   }
 }

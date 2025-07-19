@@ -6,43 +6,72 @@ body {
 
 #root {
   display: grid;
-  grid-template-columns: auto 1fr auto; /* Colunas: menu | conteúdo | espaço vazio */
+  grid-template-columns: 
+    minmax(200px, 15vw)    /* Menu lateral esquerdo */
+    1fr                    /* Conteúdo central (expansível) */
+    minmax(250px, 350px);  /* Conteúdo lateral direito */
   min-height: 100vh;
 }
 
-/* #root {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-} */
-
 .conteudoLateralEsquerda {
-  width: 15vw;
-  background: white;
   position: fixed;
   top: 0;
   bottom: 0;
+  width: 15vw;
+  background: white;
 }
 
 .ConteudoCentral {
-  grid-column: 2; /* Ocupa apenas a coluna do meio */
-  width: 52vw;
-  margin: 0 auto; /* Centraliza dentro da coluna */
+  grid-column: 2;
+  /* width: 100%; */
+  width: 50vw;
+  margin: 0 auto;
   padding: 20px 0;
 }
 
 .conteudoLateralDireita {
-  
+    width: 30vw;
+  padding: 0 1rem;
   overflow-y: auto;
 }
 
-p {
-  margin: 0;
+@media (max-width: 1260px) {
+  .ConteudoCentral {
+    max-width: 600px;
+    width: 100%;
+  }
+  
+  .conteudoLateralDireita {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 1024px) {
-    .ConteudoCentral {
-        width: 0;
-    }
+  #root {
+    grid-template-columns: auto 1fr; /* Remove a coluna direita */
+  }
+  
+  .conteudoLateralDireita {
+    display: none;
+  }
+  
+  .ConteudoCentral {
+    max-width: 100%;
+    padding: 20px 10px;
+  }
 }
 
+@media (max-width: 768px) {
+  #root {
+    grid-template-columns: 1fr; /* Layout de coluna única */
+  }
+  
+  .conteudoLateralEsquerda {
+    display: none;
+  }
+  
+  .ConteudoCentral {
+    width: 100%;
+    padding: 10px;
+  }
+}

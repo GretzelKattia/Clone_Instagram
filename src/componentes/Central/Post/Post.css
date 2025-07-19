@@ -147,3 +147,53 @@ header {
     transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  .Post {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    /* padding: 10px; */
+  }
+  
+  .card-body img {
+    max-height: 100vh;
+    object-fit: contain;
+  }
+  
+  .card-header, .card-footer {
+    padding: 10px;
+  }
+  
+  .fake-comment {
+    padding: 15px 10px;
+  }
+  
+  .legend p {
+    padding: 0 10px;
+  }
+  
+  .traductor, .comments {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile h3 {
+    font-size: 14px;
+  }
+  
+  .icons-1 {
+    gap: 12px;
+  }
+  
+  .like span, .legend p, .traductor p, .comments p {
+    font-size: 14px;
+  }
+  
+  .fake-comment input {
+    font-size: 14px;
+  }
+}
