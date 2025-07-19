@@ -1,26 +1,48 @@
 .ConteudoLateralDireita {
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
 }
 
-footer .detalhes {
-    cursor: pointer;
-    
+.ConteudoLateralDireita {
+    overflow: visible;
+    padding-left: 0;
 }
 
 footer {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    margin: 0px 15px;
-    opacity: 0.5;
-  }
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
 
-p:hover {
+footer p {
+    font-size: 0.75rem;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+footer p:hover {
     opacity: 0.9;
 }
 
-a {
-    text-decoration: #ff32ff wavy underline;; 
-    color: inherit; 
+footer a {
+    text-decoration: #ff32ff wavy underline;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+    .ConteudoLateralDireita {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .ConteudoLateralDireita {
+        display: none;
+    }
 }

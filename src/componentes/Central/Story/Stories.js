@@ -39,12 +39,24 @@ var ListaUsuarios = [
 ]
 
 export default function Stories() {
-    return (
-    <div className="Stories">
+  return (
+    <div className="Stories-container">
+      <div className="Stories">
         {ListaUsuarios.map((usuario) => {
             return <Story nomeUsuario= {usuario.nome} caminhoDaImagem= {usuario.url} />
         })
         }
+      </div>
     </div>
-    )
+  )
 }
+
+// return (
+//     <div className="Stories-container">
+//       <div className="Stories">
+//         {ListaUsuarios.map((usuario) => (
+//           <Story key={usuario.nome} {...usuario} />
+//         ))}
+//       </div>
+//     </div>
+//   )

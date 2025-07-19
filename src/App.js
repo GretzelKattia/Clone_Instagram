@@ -6,12 +6,14 @@ import Central from './componentes/Central/ConteudoCentral'
 // './ConteudoLateralEsquerda';
 // ../componentes/Central/ConteudoCentral
 // JSX 
-import { SpeedInsights } from "@vercel/speed-insights/react"
+// import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   return (
     <>
+    <div id="conteudoLateralEsquerda">
       <Esquerda />
+      </div>
       <Central />
 
       <div className='conteudoLateralDireita'>

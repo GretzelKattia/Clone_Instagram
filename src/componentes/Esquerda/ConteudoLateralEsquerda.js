@@ -19,20 +19,16 @@ export default function ConteudoLateralEsquerda() {
     return (
         <div className='conteudoLateralEsquerda'>
             <img className='imagemInstagram' src={logo} alt='Logo' />
-            {/* <p>Exemplo de conteúdo lateral esquerda</p> */}
-            {/* <p><FaHome fontSize={50} color='yellow' /></p> */}
-
-
             <ul>
                 <strong>
                 <Menu nome="Home" icone={<GoHomeFill fontSize={30}/>}/>
                 </strong>
                 <Menu nome="Pesquisar" icone= {<FaMagnifyingGlass fontSize={25}/>}/>
                 <Menu nome="Explorar" icone= {<MdOutlineExplore fontSize={30}/>}/>
+                <Menu nome="Reels" icone= { <PiVideoFill fontSize={30}/>}/>
                 <Menu nome="Mensagens" icone= {<RiMessengerLine fontSize={30}/>}/>
                 <Menu nome="Notificação" icone= {<TiHeartOutline fontSize={30}/>}/>
                 <Menu nome="Criar" icone= {<BsPlusSquare fontSize={25}/>}/>
-                <Menu nome="Reels" icone= { <PiVideoFill fontSize={30}/>}/>
 
         <div className='icone_perfil'>
                 <Menu nome="Perfil" icone= {<MdPerson3 fontSize={30}/>} style={{ transition: 'transform 0.3s ease-in-out', cursor: 'pointer' }}/>

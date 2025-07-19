@@ -1,4 +1,4 @@
-// import './Feed.css';
+import './Feed.css';
 
 import Post from './Post/Post';
 

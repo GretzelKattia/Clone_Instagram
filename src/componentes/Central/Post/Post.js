@@ -1,66 +1,43 @@
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Adicionei useEffect aqui
 import './Post.css';
-
 import { FiMoreHorizontal } from "react-icons/fi";
-
 import { VscHeart } from "react-icons/vsc";
 import { VscHeartFilled } from "react-icons/vsc";
-
 import { BsChat } from "react-icons/bs";
-
 import { FiSend } from "react-icons/fi";
-
 import { BsBookmark } from "react-icons/bs";
 import { BsBookmarkStarFill } from "react-icons/bs";
-
-
 import { BsEmojiWink } from "react-icons/bs";
 
 export default function Post(props) {
-    // useState é uma forma de armazenar estados dentro de um componente.
   const [liked, setLiked] = useState(false);
   const [likes, setLikes] = useState(props.initialLikes);
-
   const [saves, setSaves] = useState(false);
-
-
-  /*
-  Arrow Functions são outra forma de criar funções em JavaScript.
-  isso -> 
-
-      var a = () => setLikes(likes + 1)
-      
-      é equivalente a isso 
-      
-      function(){
-          setLikes(likes + 1);
-      }
-
-      var a = function() {}
-  */
-
-  
-      // Operador ternários
-
-      // isso -> likes % 2 === 0 ? 'black' : 'red'
-
-      // é o mesmo que isso:
-
-      // if(likes % 2 === 0){
-      //     'black'
-      // } else {
-      //     'red'
-  
+  const [pulsing, setPulsing] = useState(false);
 
   const toggleLike = () => {
-    setLiked(!liked);
-    setLikes(liked ? likes - 1 : likes + 1);
+    const newLiked = !liked;
+    setLiked(newLiked);
+    setLikes(newLiked ? likes + 1 : likes - 1);
+    
+    if (newLiked) {
+      setPulsing(true);
+    }
   };
 
+  // Adicionei a função toggleSaves que estava faltando
   const toggleSaves = () => {
     setSaves(!saves);
-    // setLikes(liked ? likes - 1 : likes + 1);
   };
+
+  useEffect(() => {
+    if (pulsing) {
+      const timer = setTimeout(() => {
+        setPulsing(false);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [pulsing]);
 
   return (
     <div className="card Post">
@@ -84,12 +61,14 @@ export default function Post(props) {
                 onClick={toggleLike}
                 style={{ color: "red", cursor: "pointer" }}
                 fontSize={26}
+                className={`heart-icon ${pulsing ? 'pulse' : ''}`}
               />
             ) : (
               <VscHeart
                 onClick={toggleLike}
                 style={{ cursor: "pointer" }}
                 fontSize={26}
+                className="heart-icon"
               />
             )}
 
@@ -97,25 +76,23 @@ export default function Post(props) {
             <FiSend fontSize={24} />
           </div>
 
-          {/* <BsBookmark fontSize={23} className="salvar" /> */}
           {saves ? (
-            < BsBookmarkStarFill
-            onClick={toggleSaves}
-            style={{color: "#ffc222", cursor: "pointer"}}
-            fontSize={23}
+            <BsBookmarkStarFill
+              onClick={toggleSaves} // Agora toggleSaves está definido
+              style={{color: "#ffc222", cursor: "pointer"}}
+              fontSize={23}
             />
-        ) : (
-            < BsBookmark
-            onClick={toggleSaves}
-            style={{ cursor: "pointer"}}
-            fontSize={23}
+          ) : (
+            <BsBookmark
+              onClick={toggleSaves} // Agora toggleSaves está definido
+              style={{ cursor: "pointer"}}
+              fontSize={23}
             />
-        )
-        }
+          )}
         </div>
 
         <section className="like">
-          <span>{likes} curtidas</span> {/* Exibe o número atualizado de likes */}
+          <span>{likes} curtidas</span>
         </section>
                 
         <div className="legend">

@@ -1,102 +1,87 @@
-/* .header-suggestion {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+:root {
+    --primary-blue: #0095f6;
+    --dark-blue: #0074cc;
+    --secondary-text: #8e8e8e;
+    --light-gray: #dbdbdb;
 }
-.suggestion-imagens-perfil {
-    width: 56px;
-    height: auto;
-    border-radius: 100%;
-    cursor: pointer;
-}
-
-.suggestion-information-perfil{
-    display: flex;
-    align-items: center;
-    justify-content:space-between;
-} */
 
 .container-suggestion {
-    margin-top: 18px;
-    padding: 10px 15px 2px 15px;
-    
-    
+    margin-top: 1.125rem;
+    padding: 0.625rem 0.9375rem 0.125rem;
 }
 
 .header-suggestion {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
 }
 
 .header-suggestion img {
-    height: 56px;
-    width: 56px;
-    border-radius: 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
     cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.header-suggestion:hover img {
+    transform: scale(1.05);
 }
 
 .user-infos-suggestion {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     flex: 1;
 }
 
 .user-infos-suggestion .infos span {
-    font-size: 15px;
+    display: block;
+    font-size: 0.9375rem;
     font-weight: 600;
     cursor: pointer;
 }
 
 .user-infos-suggestion .infos p {
-    font-size: 13px;
-    color: var(--secondary);
+    font-size: 0.8125rem;
+    color: var(--secondary-text);
+    margin-top: 0.125rem;
 }
 
 .mudarConta {
     font-weight: 500;
-    color: #007bff;
+    color: var(--primary-blue);
     cursor: pointer;
+    font-size: 0.75rem;
+    transition: all 0.2s ease;
 }
 
 .mudarConta:hover {
-    color: #0055b1; 
+    color: var(--dark-blue);
 }
 
-
-
-.header-main-suggestion  {
+.header-main-suggestion {
     display: flex;
     justify-content: space-between;
-
-    margin: 20px 0 10px 0;
-}
-
-.header-suggestion p {
-    font-size: 15px;
-    color: #007bff;
-
-    font-weight: 500;
+    align-items: center;
+    margin: 1.25rem 0 0.625rem;
 }
 
 .suggestionPeople {
-    color: #898989;
+    color: var(--secondary-text);
     font-weight: 500;
+    font-size: 0.875rem;
 }
 
 .header-main-suggestion span {
-    font-size: 14px;
+    font-size: 0.75rem;
     font-weight: 500;
     cursor: pointer;
+    transition: opacity 0.2s ease;
 }
 
 .header-main-suggestion span:hover {
-    opacity: 0.5;
+    opacity: 0.7;
 }
-
-.user-suggestion {
-    margin-top: 5px;
-}
-

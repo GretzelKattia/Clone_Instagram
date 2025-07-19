@@ -1,68 +1,144 @@
-
-.imagemInstagram {
-    display: flex;
-    justify-content: center;
-    align-items:center;    
-    width: 150px;
-    height: auto;
-    padding-left: 10px;
-    margin: 20px 0px;
+:root {
+  --primary-color: #262626;
+  --secondary-color: #8e8e8e;
+  --hover-color: #e5e0e0;
+  --border-color: #dbdbdb;
+  --icon-size: 24px;
+  --mobile-icon-size: 20px;
 }
 
 .conteudoLateralEsquerda {
   background-color: rgb(255, 255, 255);
-  border-right: 1px solid #ccc; /* Adiciona uma borda direita ao conteúdo lateral esquerdo */
-
-  font-size: 20px;
-
+  border-right: 1px solid var(--border-color);
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 
-.separar{
-    margin: 15px;
+.imagemInstagram {
+  width: 120px;
+  height: auto;
+  margin: 10px 0 30px 10px;
+  transition: transform 0.3s ease;
+}
+
+.imagemInstagram:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu-item:hover {
+  background-color: var(--hover-color);
+  /* transform: translateX(1px); */
+}
+
+.menu-item strong {
+  font-weight: 600;
+}
+
+.menu-icon {
+  margin-right: 16px;
+  font-size: var(--icon-size);
+  display: flex;
+  align-items: center;
+}
+
+.icone_perfil {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1260px) {
+  .conteudoLateralEsquerda {
+    width: 80px;
+    align-items: center;
   }
   
-  /* li {
-    display: flex;
-    list-style-type: none;
-    justify-content:flex-start;
-    align-items: center;
-    display: flex;
-    align-items: center;
-  } */
+  .imagemInstagram {
+    width: 80px;
+    margin: 10px 0 30px 0;
+    padding-left: 0;
+  }
   
-  .icone_perfil{
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content:flex-start;
+  .menu-item {
+    justify-content: center;
+    padding: 15px 0;
+    width: 50px;
+  }
+  
+  .menu-item .menu-text {
+    display: none;
+  }
+  
+  .menu-icon {
+    margin-right: 0;
+    font-size: var(--mobile-icon-size);
+  }
+}
+
+@media (max-width: 768px) {
+  .conteudoLateralEsquerda {
     width: 100%;
-    
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    border-right: none;
+    border-top: 1px solid var(--border-color);
+    padding: 5px 0;
+    z-index: 100;
   }
   
-  .container {
-    display: flex;
-    align-items: center; /* alinha os itens verticalmente */
-    margin: 12px 0px; /* Adiciona uma margem entre os itens da lista */
-    width: 280px;
+  .imagemInstagram {
+    display: none;
   }
-  
-  .container:hover{
-    border-radius: 10px;
-    background-color: #F2F2F2;
-    width: 250px;
-    transition: 0.5s;
-    cursor: pointer;
-}
   
   ul {
-    list-style-type: none;
-    padding-left: 5%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    gap: 0;
   }
-
   
-
-
-  
-  strong {
-    font-weight: 700;
+  .menu-item {
+    padding: 10px 15px;
+    width: auto;
+    flex-direction: column;
   }
+  
+  .menu-item .menu-text {
+    display: none;
+  }
+  
+  .menu-icon {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  
+  .icone_perfil {
+    position: static;
+    margin: 0;
+  }
+}

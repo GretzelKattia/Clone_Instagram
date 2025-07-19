@@ -1,71 +1,99 @@
-.ConteudoCentral {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ajustado para flex-start */
-    align-items: center; 
-    width: calc(100% - 18vw); /* Ajustado para levar em conta a largura do conteúdo lateral esquerdo */
-    height: 100%;
-    /* background-color: #250505; */
-    margin-left: 18vw; /* Adicionado margem esquerda para evitar sobreposição */
-}
-
 .Stories {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    height: 20vh;
+  display: flex;
+  overflow-x: auto; /* Habilita rolagem horizontal */
+  /* width: 150%; */
+  padding: 10px 0;
+  gap: 15px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  width: max-content;
+  margin: 0 auto;
 }
 
+.Stories::-webkit-scrollbar {
+  display: none;
+}
 
 .Story {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 70px;
-    margin: 5px;
-    margin-top: 25px;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 80px;
+  cursor: pointer;
 }
 
 .imagem-perfil {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    padding: 2px;
-    /* background-color: rgb(48, 155, 249); */
-    background: linear-gradient( #b62dc8, #ffba27 60%);
-    /* background: radial-gradient(
-        #fed373 4%,
-        #f15245 30%,
-        #d92e7f 62%,
-        #9b36b5 15%);  */
-
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #f0b733 0%,
+    #ef8f29  25%,
+    #dc9a27 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .Story img {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    padding: 1px; /* Adiciona um preenchimento para criar o espaço em branco entre a imagem e a borda branca */
-    background: #fff;
-    box-sizing: border-box; /* Garante que a borda e o preenchimento não aumentem o tamanho total da imagem */
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
 }
 
-
-
-
-
 .nome-usuario {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    margin: 0;
-    margin-top: 3px;
-    font-size: 12px;
+  margin-top: 5px;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 1260px) {
+  #root {
+    grid-template-columns: 80px 1fr 10px;
+  }
+  
+  .Stories {
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  #root {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  
+  .ConteudoCentral {
+    grid-column: 1;
+    padding: 10px;
+  }
+  
+  .Stories {
+    width: 100vw;
+    margin-left: -10px;
+    padding-left: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Story {
+    width: 70px;
+  }
+  
+  .imagem-perfil {
+    width: 60px;
+    height: 60px;
+  }
 }

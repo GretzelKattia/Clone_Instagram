@@ -1,35 +1,48 @@
 body {
-  background: #ffffff;
-  margin: 0; /* Certifique-se de que não há margens extras */
-  overflow-x: hidden; /* Impede a rolagem horizontal */
+  background: #f5f0f0;
+  margin: 0;
+  overflow-x: hidden;
 }
 
 #root {
-  display: flex;
-  flex-direction: row;
-  position: relative; /* Adiciona posicionamento relativo ao #root */
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Colunas: menu | conteúdo | espaço vazio */
+  min-height: 100vh;
 }
 
+/* #root {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+} */
+
 .conteudoLateralEsquerda {
-  width: 18vw;
+  width: 15vw;
   background: white;
-  position: fixed; /* Alterado de fixed para absolute */
+  position: fixed;
   top: 0;
   bottom: 0;
 }
 
-.conteudoCentral {
-  flex: 1;
-  width: 30vw;
-  padding: 20px;
-  overflow-y: auto;
+.ConteudoCentral {
+  grid-column: 2; /* Ocupa apenas a coluna do meio */
+  width: 52vw;
+  margin: 0 auto; /* Centraliza dentro da coluna */
+  padding: 20px 0;
 }
 
 .conteudoLateralDireita {
-  width: 42vw;
+  
   overflow-y: auto;
 }
 
 p {
   margin: 0;
 }
+
+@media (max-width: 1024px) {
+    .ConteudoCentral {
+        width: 0;
+    }
+}
+

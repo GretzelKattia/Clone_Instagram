@@ -1,13 +1,10 @@
-
+import '../src/componentes/Esquerda/ConteudoLateralEsquerda.css';
 
 export default function TextMenu(props) {
   return (
-    <div className='container'>
-      <span className= "separar"> {props.icone} </span>
-      <span>  {props.nome} </span> 
-
-      {/* <span className="separar1"> {props.icone1} </span> 
-      <span className="nome1">  {props.nome1} </span>  */}
-    </div>
+    <li className='menu-item'>
+      <span className="menu-icon">{props.icone}</span>
+      <span className="menu-text">{props.nome}</span> 
+    </li>
   );
 }
