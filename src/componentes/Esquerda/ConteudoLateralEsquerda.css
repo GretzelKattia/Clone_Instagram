@@ -8,12 +8,15 @@
 }
 
 .conteudoLateralEsquerda {
-  background-color: rgb(255, 255, 255);
   border-right: 1px solid var(--border-color);
   position: fixed;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+}
+
+.iconeInstagramMobile {
+  display: none; /* Mantém escondido por padrão */
 }
 
 .imagemInstagram {
@@ -73,12 +76,34 @@ ul {
   .conteudoLateralEsquerda {
     width: 80px;
     align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
+
+  /* overflow-x: auto;
+  padding: 10px 0;
+  gap: 15px;
+  scrollbar-width: none;
+  -ms-overflow-style: none; */
   
-  .imagemInstagram {
+  /* .imagemInstagram {
     width: 80px;
     margin: 10px 0 30px 0;
     padding-left: 0;
+  } */
+
+  .iconeInstagramMobile {
+    display: flex; /* Usa flex para melhor alinhamento */
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0; /* Espaçamento maior */
+    padding: 10px 0;
+    font-size: 30px;
+  }
+
+  .imagemInstagram {
+    display: none;
   }
   
   .menu-item {
@@ -95,6 +120,10 @@ ul {
     margin-right: 0;
     font-size: var(--mobile-icon-size);
   }
+
+  .icone_perfil {
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -109,6 +138,10 @@ ul {
     border-top: 1px solid var(--border-color);
     padding: 5px 0;
     z-index: 100;
+  }
+  
+  .iconeInstagramMobile {
+    display: none; /* Esconde novamente no menu inferior */
   }
   
   .imagemInstagram {

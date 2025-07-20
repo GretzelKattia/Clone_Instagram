@@ -57,7 +57,7 @@ npm install
 Depois de instalar as dependências, você pode iniciar o servidor de desenvolvimento.
 
 ```bash
-npm start
+npm run start
 ```
 
 Isso iniciará o servidor de desenvolvimento e abrirá automaticamente uma janela do navegador com o aplicativo em execução. Se isso não acontecer, você pode acessar o projeto manualmente em `http://localhost:3000` no seu navegador.

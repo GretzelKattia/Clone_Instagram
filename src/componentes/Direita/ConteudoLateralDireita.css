@@ -36,6 +36,12 @@ footer a {
     transition: all 0.3s ease;
 }
 
+@media (max-width: 1260px) {
+    .ConteudoLateralDireita {
+        display: none;
+    }
+}
+
 @media (max-width: 1024px) {
     .ConteudoLateralDireita {
         display: none;

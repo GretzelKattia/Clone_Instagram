@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"; // Adicionei useEffect aqui
-import './Post.css';
+import "./Post.css";
 import { FiMoreHorizontal } from "react-icons/fi";
 import { VscHeart } from "react-icons/vsc";
 import { VscHeartFilled } from "react-icons/vsc";
@@ -19,7 +19,7 @@ export default function Post(props) {
     const newLiked = !liked;
     setLiked(newLiked);
     setLikes(newLiked ? likes + 1 : likes - 1);
-    
+
     if (newLiked) {
       setPulsing(true);
     }
@@ -44,10 +44,14 @@ export default function Post(props) {
       <header>
         <div className="card-header">
           <div className="profile">
-            <img className="imagem-postagem" src={props.imgPerfil} alt="Perfil" />
+            <img
+              className="imagem-postagem"
+              src={props.imgPerfil}
+              alt="Perfil"
+            />
             <h3>{props.title}</h3>
           </div>
-          <FiMoreHorizontal fontSize={26} style={{cursor: "pointer" }}/>
+          <FiMoreHorizontal fontSize={26} style={{ cursor: "pointer" }} />
         </div>
       </header>
 
@@ -61,7 +65,7 @@ export default function Post(props) {
                 onClick={toggleLike}
                 style={{ color: "red", cursor: "pointer" }}
                 fontSize={26}
-                className={`heart-icon ${pulsing ? 'pulse' : ''}`}
+                className={`heart-icon ${pulsing ? "pulse" : ""}`}
               />
             ) : (
               <VscHeart
@@ -79,13 +83,13 @@ export default function Post(props) {
           {saves ? (
             <BsBookmarkStarFill
               onClick={toggleSaves} // Agora toggleSaves está definido
-              style={{color: "#ffc222", cursor: "pointer"}}
+              style={{ color: "#ffc222", cursor: "pointer" }}
               fontSize={23}
             />
           ) : (
             <BsBookmark
               onClick={toggleSaves} // Agora toggleSaves está definido
-              style={{ cursor: "pointer"}}
+              style={{ cursor: "pointer" }}
               fontSize={23}
             />
           )}
@@ -94,7 +98,7 @@ export default function Post(props) {
         <section className="like">
           <span>{likes} curtidas</span>
         </section>
-                
+
         <div className="legend">
           <p>
             <strong>{props.title}</strong> {props.body}
